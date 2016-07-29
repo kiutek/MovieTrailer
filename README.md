@@ -7,7 +7,7 @@ This project requires python 2.7 to run.
 
 To install
 ```
-git clone https://github.com/kiutek/ud036_StarterCode.git
+git clone https://github.com/kiutek/MovieTrailer.git
 cd ud036_StarterCode
 ```
 
