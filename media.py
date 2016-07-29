@@ -1,7 +1,11 @@
 import webbrowser
 
 class Movie():
-    def __init__(self, movie_title, movie_storyline, poster_image, trailer_youtube):
+"""
+    The Movie class hold the information related to the movies to be displayed
+"""
+    def __init__(self, movie_title, movie_storyline, poster_image,
+                trailer_youtube):
         self.title = movie_title
         self.storyline = movie_storyline
         self.poster_image_url = poster_image
