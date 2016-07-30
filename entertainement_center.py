@@ -35,7 +35,7 @@ midnight_in_paris = media.Movie(
     """While on a trip to Paris with his fianc?e's family, a nostalgic
         screenwriter finds himself mysteriously going back to the 1920s
         everyday at midnight. """,
-    "https://upload.wikimedia.org/wikipedia/en/9/9f/Midnight_in_Paris_Poster.jpg",
+    "https://upload.wikimedia.org/wikipedia/en/9/9f/Midnight_in_Paris_Poster.jpg",  # noqa
     "http://www.youtube.com/watch?v=FAfR8omt-CY")
 hunger_games = media.Movie(
     "Hunger Games",
@@ -43,7 +43,7 @@ hunger_games = media.Movie(
         Hunger Games, a televised competition in which two teenagers from
         each of the twelve Districts of Panem are chosen at random to fight
         to the death.""",
-    "https://upload.wikimedia.org/wikipedia/en/3/39/The_Hunger_Games_cover.jpg",
+    "https://upload.wikimedia.org/wikipedia/en/3/39/The_Hunger_Games_cover.jpg",  # noqa
     "http://www.youtube.com/watch?v=mfmrPu43DF8")
 
 # Open the website using fresh_toamatos
