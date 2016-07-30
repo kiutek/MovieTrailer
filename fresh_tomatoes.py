@@ -125,6 +125,7 @@ movie_tile_content = '''
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
     <img src="{poster_image_url}" width="220" height="342">
     <h2>{movie_title}</h2>
+    <p>{movie_storyline}<p>
 </div>
 '''
 
@@ -140,10 +141,19 @@ def create_movie_tiles_content(movies):
             r'(?<=be/)[^&#]+', movie.trailer_youtube_url)
         trailer_youtube_id = (youtube_id_match.group(0) if youtube_id_match
                               else None)
+        # The page doesn't support very long stroryline, and it should not
+        # Shorten the string and add an Ellipsis
+        # TODO permit the user to click on the text and view the entire
+        # storyline
+        if len(movie.storyline) > 155:
+            short_stroyline = movie. storyline[0:152] + '...'
+        else:
+            short_stroyline = movie. storyline
 
         # Append the tile for the movie with its content filled in
         content += movie_tile_content.format(
             movie_title=movie.title,
+            movie_storyline= short_stroyline,
             poster_image_url=movie.poster_image_url,
             trailer_youtube_id=trailer_youtube_id
         )
